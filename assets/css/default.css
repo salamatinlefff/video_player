@@ -1,0 +1,192 @@
+:root {
+  --main-color: #000000;
+  --second-color: #ffffff;
+  --third-color: #bdae82;
+  --default-background-color: #000000;
+  --background-color-is-active-menu: #000000;
+  --background-color-button: #bdae82;
+  --button-color-text: #000000;
+  --title-wrapper-background: #bdae82;
+  --title-color-text: #bdae82;
+  --title-background: #000000;
+  --header-color: #ffffff;
+  --header-color-hover: #bdae82;
+  --header-color-change-label: #ffffff;
+  --header-color-checked-radio: #bdae82;
+  --nav-list-color: #ffffff;
+  --nav-list-background: #000000;
+  --nav-item-color-hover-1440: #bdae82;
+  --nav-item-color-hover-768: #bdae82;
+  --burger-color: #ffffff;
+  --hero-color: #ffffff;
+  --hero-background-button: #ffffff;
+  --hero-background-button-hover: #bdae82;
+  --hero-button-color-hover: #ffffff;
+  --hero-desc-color-shadow: #000000;
+  --skills-color-text: #ffffff;
+  --skills-color-icons: #bdae82;
+  --portfolio-button-color-border: #bdae82;
+  --portfolio-button-background: #000000;
+  --portfolio-button-color-text: #bdae82;
+  --portfolio-button-color-text-hover: #ffffff;
+  --portfolio-button-color-border-active: #bdae82;
+  --button-background-active: #bdae82;
+  --button-color-text-active: #000000;
+  --video-color-button: #ffffff;
+  --video-color-button-hover: #bdae82;
+  --price-color-text: #ffffff;
+  --price-card-border: #bdae82;
+  --price-color-price: #bdae82;
+  --price-background-button: #bdae82;
+  --price-color-button: #000000;
+  --price-background-button-hover: #bdae82;
+  --price-color-button-hover: #ffffff;
+  --contacts-color-text: #bdae82;
+  --contacts-border-input: #bdae82;
+  --contacts-background-input: rgba(0, 0, 0, 0.5);
+  --contacts-color-button-hover: #ffffff;
+  --contacts-background-button-hover: #bdae82;
+  --footer-color-text: #ffffff;
+  --footer-color-hover: #bdae82;
+  --font-main: Inter, sans-serif;
+  --font-second: Merriweather, serif;
+  --width-video-btn: 13rem;
+  --height-video-btn: 13rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 32rem;
+  max-width: 144rem;
+  margin: 0 auto;
+  background-color: var(--default-background-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+
+.button {
+  width: 22rem;
+  height: 5.5rem;
+  padding: 0;
+  background-color: var(--background-color-button);
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 4rem;
+  border: 2px solid transparent;
+  color: var(--button-color-text);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.25s ease-in-out, border 0.3s ease-in-out;
+}
+
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 6rem;
+  max-width: 70rem;
+  position: relative;
+}
+
+.title_wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  top: calc(50% - 0.1rem);
+  left: 0;
+  background-color: var(--title-wrapper-background);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  height: 8rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 8rem;
+  text-align: center;
+  color: var(--title-color-text);
+  background-color: var(--title-background);
+  overflow: hidden;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 6rem 0 6rem;
+    background-size: 98.1rem;
+    background-position: -0.5rem -3rem;
+  }
+
+  .title_wrapper {
+    margin: 0 auto 5rem;
+    max-width: 36.4rem;
+    position: relative;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding: 0 2rem 0 2rem;
+    background-size: 85rem;
+    background-position: -8.5rem -3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    background-position: -22rem -3rem;
+  }
+}

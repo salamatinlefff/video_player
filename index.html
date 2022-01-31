@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/default.css">
+  <link rel="stylesheet" href="./assets/css/video.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="./assets/scripts/video.js" defer></script>
+  <title>Portfolio</title>
+</head>
+<body>
+<div class="container">
+  <main>
+  <section class="video" id="video">
+    <div class="title_wrapper">
+      <h2 class="title" data-i18n="video">Video</h2>
+    </div>
+    <div class="video__player-wrapper j-player">
+      <em class="fas fa-pause player__main-icon j-pause">pause</em>
+      <em class="fas fa-play player__main-icon j-play">play</em>
+      <em class="fas fa-backward player__main-icon j-backward">- 5 sec.</em>
+      <em class="fas fa-forward player__main-icon j-forward">+ 5 sec.</em>
+      <video class="player__video" poster="./assets/img/married.jpg" src="./assets/video/video.mp4"></video>
+      <button class="video__play-button play-button">
+        <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M58.521.1357c-.4991.1205-2.9511.5507-5.4481.9554C6.1742 8.6981-16.0083 65.9044 13.0263 104.367c9.0418 11.977 29.806 25.539 30.8344 20.139.1288-.674-1.1073-1.528-4.1753-2.882-12.5863-5.559-23.9757-16.512-30.19-29.0302C-13.0743 47.1276 25.5403-4.3232 75.965 4.0285c7.5749 1.255 8.8905-1.3607 1.4669-2.9172C74.053.4028 60.344-.304 58.521.1363V.1357Zm.3026 13.407c-8.8674 1.3067-20.2781 5.8469-20.2781 8.0687 0 1.7238 1.2806 1.5903 5.9608-.6213C70.1424 8.8779 101.354 22.1306 110.64 49.0716c15.435 44.7808-35.5206 82.6884-74.213 55.2074-21.5006-15.27-26.4586-45.6-11.0239-67.4394 4.0958-5.7953 1.9405-8.2455-2.2419-2.5482-25.769 35.1052 1.1352 84.6906 44.6099 82.2156 43.8869-2.499 64.8699-55.0864 34.6699-86.8875-11.0716-11.6582-28.9322-18.2415-43.6168-16.078l-.0006.0012Zm52.7644 7.9061c-.9.9002-.212 2.5113 2.669 6.2552 21.363 27.7539 14.369 69.2389-14.9631 88.756-13.2171 8.795-24.8219 11.232-46.5231 9.773-2.0437-.137-2.4217.019-2.4217 1.004 0 4.474 25.9749 3.261 38.8538-1.815 37.7651-14.883 52.6551-62.9274 29.8911-96.4481-4.32-6.3602-6.492-8.5387-7.506-7.5245v-.0006ZM47.2645 44.1107c-1.0735 1.1856-1.1655 2.576-1.3298 20.0924-.27 28.7966-3.1362 27.9261 31.6343 9.608 16.9455-8.928 17.0405-8.6479-7.2634-21.3968-19.0017-9.9676-20.9107-10.6559-23.0411-8.3036Zm20.9992 10.8945c18.4623 9.6429 18.5584 9.7029 17.2671 10.7746C84.0829 66.982 51.1615 84 50.285 84c-.7038 0-.8438-3.1647-.8438-19.0676 0-13.375.1976-19.0682.661-19.0682.3632 0 8.5363 4.1136 18.1621 9.141h-.0006Z" fill="currentColor"/>
+        </svg>
+      </button>
+      <div class="player__panel">
+        <div class="player__lines j-line">
+          <div class="player__hint j-hint"></div>
+          <div class="player__line player__line_current"></div>
+          <div class="player__line player__line_ghost j-line-ghost player__line_ghost"></div>
+          <div class="player__line player__line_full"></div>
+        </div>
+        <div class="player__panel-block">
+          <button class="player__panel-button j-toggle-video play-button">
+            <em class="fa-solid fa-play"></em>
+          </button>
+          <button class="player__panel-button player__panel-button_volume">
+            <em class="fa player__volume-icon j-toggle-volume"></em>
+            <input type="range" class="player__volume j-volume-input">
+          </button>
+          <span class="player__duration j-duration">00:00</span>
+        </div>
+        <div class="player__panel-block">
+          <button class="player__panel-button">
+            <em class="fas fa-expand j-fullscreen player__fullscreen-icon"></em>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__data">
+      <span>©</span>
+    <time datetime="2022-01-12">2022</time>
+    <a class="footer__github" href="https://github.com/salamatinlefff" target="blank">@salamatinlefff</a>
+    </div>
+
+    <a class="footer__rss" href="https://rs.school/js-stage0/" target="blank">Rolling Scopes School</a>
+
+    <ul class="footer__social-list">
+      <li class="footer__social_item">
+        <a href="#" class="footer__icon">
+        <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.36.667c2.4 0 2.907.027 4.133.08 1.413.067 2.387.293 3.227.627.88.333 1.627.8 2.36 1.533.747.733 1.2 1.48 1.547 2.36.333.84.547 1.813.613 3.24.067 1.267.08 1.76.08 4.427v2.133c0 2.667-.013 3.16-.08 4.427-.023 1.165-.246 2.27-.636 3.294l.022-.067c-.347.88-.8 1.627-1.533 2.36-.747.747-1.493 1.2-2.373 1.547-.84.333-1.813.547-3.227.613-1.267.067-1.773.08-4.44.08h-2.12c-2.667 0-3.16-.013-4.44-.08-1.165-.023-2.27-.246-3.294-.636l.067.022c-.923-.353-1.71-.874-2.359-1.533l-.001-.001a6.5445 6.5445 0 0 1-1.532-2.329l-.015-.045c-.367-.956-.59-2.062-.613-3.217v-.01c-.053-1.042-.083-2.263-.083-3.49 0-.226.001-.452.003-.677v.034-2.733c0-2.4.027-2.907.08-4.133.067-1.413.293-2.387.613-3.227.347-.88.8-1.627 1.547-2.36a6.2702 6.2702 0 0 1 2.317-1.519l.043-.014c.955-.371 2.06-.599 3.215-.626h.012c1.227-.053 1.733-.08 4.133-.08h2.734Zm.027 2.4H12.6c-2.307 0-2.8.027-4 .08-1.293.053-2 .267-2.467.453-.627.24-1.067.533-1.533 1-.466.467-.76.907-1 1.533-.173.467-.4 1.173-.453 2.48-.053 1.2-.08 1.68-.08 4v2.773c0 2.32.027 2.8.08 4 .053 1.293.267 2 .453 2.467.24.627.533 1.067 1 1.533.467.466.907.76 1.533 1 .467.187 1.173.4 2.48.453 1.293.067 1.76.08 4.64.08h1.48c2.893 0 3.347-.013 4.653-.08 1.293-.053 2-.267 2.467-.453.627-.24 1.067-.533 1.533-1 .466-.467.76-.907 1-1.533.187-.467.4-1.173.453-2.467.067-1.307.08-1.76.08-4.653v-1.467c0-2.893-.013-3.36-.08-4.667-.053-1.293-.267-2-.453-2.467-.226-.601-.567-1.114-.999-1.532l-.001-.001a4.141 4.141 0 0 0-1.505-.991l-.028-.009c-.732-.276-1.578-.441-2.462-.453h-.005c-1.028-.052-2.231-.082-3.442-.082-.196 0-.392.001-.588.002h.03l.001.001ZM14 7.147c3.781 0 6.847 3.065 6.847 6.847 0 3.782-3.065 6.847-6.847 6.847-3.781 0-6.847-3.065-6.847-6.847 0-3.782 3.065-6.847 6.847-6.847Zm0 2.4c-2.456 0-4.447 1.991-4.447 4.447s1.991 4.447 4.447 4.447 4.447-1.991 4.447-4.447S16.456 9.547 14 9.547Zm7.107-4.267c.884 0 1.6.716 1.6 1.6 0 .884-.716 1.6-1.6 1.6-.884 0-1.6-.716-1.6-1.6 0-.884.716-1.6 1.6-1.6Z" fill="currentColor"/>
+        </svg>
+      </a>
+      </li>
+
+      <li class="footer__social_item">
+        <a href="#" class="footer__icon">
+        <svg width="17" height="28" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.04 27.333 5 15.666H0v-5h5V7.333C5 2.84 7.787.666 11.8.666c1.92 0 3.573.133 4.053.2v4.707h-2.787c-2.173 0-2.6 1.04-2.6 2.56v2.533h6.2l-1.667 5h-4.533v11.667H5.039h.001Z" fill="currentColor"/>
+        </svg>
+      </a>
+      </li>
+
+      <li class="footer__social_item"> 
+        <a href="#" class="footer__icon">
+        <svg width="28" height="22" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.333 2.84c-1 .493-2 .667-3.173.827 1.173-.667 2-1.667 2.333-3-1.005.608-2.176 1.071-3.423 1.322l-.07.012C21.969.987 20.56.355 19.004.334H19c-2.84 0-5.333 2.507-5.333 5.507 0 .493 0 .827.173 1.16-4.578-.178-8.619-2.337-11.311-5.639l-.022-.028c-.425.726-.676 1.598-.676 2.529 0 .109.003.218.01.326l-.001-.015c.034 1.878 1.009 3.521 2.473 4.481l.021.013c-.84 0-1.667-.333-2.507-.667 0 2.667 1.84 4.84 4.333 5.333-.493.173-1 .173-1.493.173-.333 0-.667 0-1-.173.667 2.173 2.667 3.84 5.173 3.84-1.8 1.455-4.116 2.335-6.637 2.335-.071 0-.142-.001-.213-.002h.011H.668C3.033 21.016 5.904 21.936 8.984 22h.017c10 0 15.507-8.333 15.507-15.507v-.667c1.147-.79 2.093-1.787 2.803-2.944l.024-.042h-.002Z" fill="currentColor"/>
+        </svg>
+      </a>
+      </li>
+
+      <li class="footer__social_item">
+        <a href="#" class="footer__icon">
+        <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 .667C6.657.694.714 6.653.714 14c0 5.599 3.452 10.393 8.343 12.368l.089.032c-.133-1.053-.227-2.667.04-3.827l1.56-6.627s-.4-.8-.4-1.973c0-1.853 1.08-3.227 2.427-3.227 1.133 0 1.693.853 1.693 1.867 0 1.147-.733 2.853-1.12 4.44-.32 1.333.667 2.413 1.987 2.413 2.373 0 4.187-2.493 4.187-6.093 0-3.2-2.293-5.413-5.573-5.413a4.9501 4.9501 0 0 0-.253-.006c-3.189 0-5.773 2.585-5.773 5.773v.006c0 1.147.44 2.373.987 3.04.107.133.12.253.08.387l-.373 1.507c-.053.24-.2.307-.44.187-1.68-.787-2.72-3.2-2.72-5.173 0-4.2 3.067-8.053 8.827-8.053 4.613 0 8.227 3.28 8.227 7.693 0 4.6-2.907 8.293-6.933 8.293-1.333 0-2.613-.707-3.04-1.533l-.84 3.16c-.431 1.337-.992 2.498-1.688 3.563l.034-.056c1.17.372 2.516.587 3.911.587 7.364 0 13.333-5.97 13.333-13.333 0-7.347-5.942-13.306-13.282-13.333h-.003L14 .667Z" fill="currentColor"/>
+        </svg>
+      </a>
+      </li>
+    </ul>
+  </footer>
+</div>
+</body>
+</html>
