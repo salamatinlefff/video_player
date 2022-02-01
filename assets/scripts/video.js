@@ -35,8 +35,7 @@ class Player {
       this.video.addEventListener('timeupdate', () => {
         this.setVideoDuration();
         this.toggleInterface();
-        
-      });
+        });
       this.video.addEventListener('volumechange', this.updateVolumeInput.bind(this))
     }
 
@@ -55,7 +54,7 @@ class Player {
           this.video.volume = localStorage.getItem('volume');
         }
       });
-      this.player.querySelector('.j-fullscreen').addEventListener('click', this.toggleFullscreen.bind(this))
+      this.player.querySelector('.j-fullscreen').addEventListener('click', this.toggleFullscreen.bind(this));
     }
 
     initTimeLiveListeners() {
@@ -66,23 +65,31 @@ class Player {
         this.video.currentTime = this.calcNeededLine(event, left)
       });
     }
-
     initPageListeners() {
       document.addEventListener('keydown', (event) => {
         if(event.code ==='Space') {
           event.preventDefault();
           this.toggleVideo();
+    
         } else if(event.code === 'ArrowRight') {
-          this.video.currentTime += 5;
-          this.showRewind('.j-forward');
+          this.rewindForward();
         } else if (event.code === 'ArrowLeft') {
-          this.video.currentTime -= 5;
-          this.showRewind('.j-backward');
+          this.rewindBackward();
           
         } else if(event.code === 'KeyF') {
           this.toggleFullscreen();
         }
       })
+    }
+
+    rewindForward() {
+      this.video.currentTime += 5;
+      this.showRewind('.j-forward');
+    }
+
+    rewindBackward() {
+      this.video.currentTime -= 5;
+      this.showRewind('.j-backward');
     }
 
     showRewind(rewindClass) {
@@ -97,6 +104,8 @@ class Player {
       this.timeout = setTimeout(() => {
         this.isRewind = false;
         this.player.querySelector(rewindClass).style.display = 'flex';
+        this.player.querySelector(rewindClass).style.zIndex = '2';
+
       }, 150)
     }
 
@@ -106,8 +115,10 @@ class Player {
       const icon = this.player.querySelector('.j-toggle-video .fa-solid');
 
       this.player.querySelector('.j-play').style.display = this.isPlaying ? 'flex' : 'none';
-      this.player.querySelector('.j-pause').style.display = !this.isPlaying ? 'flex' : 'none';
+      this.player.querySelector('.j-play').style.zIndex = '2';
 
+      this.player.querySelector('.j-pause').style.display = !this.isPlaying ? 'flex' : 'none';
+      this.player.querySelector('.j-pause').style.zIndex = '2';
 
       icon.classList.toggle('fa-play', !this.isPlaying);
       icon.classList.toggle('fa-pause', this.isPlaying);
